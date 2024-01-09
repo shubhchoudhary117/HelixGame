@@ -1,0 +1,37 @@
+/* CustomSwitch.css */
+
+.custom-switch {
+    display: inline-block;
+    cursor: pointer;
+    user-select: none;
+   margin-left: 10px;
+  }
+  
+  .switch-toggle {
+    width: 40px;
+    height: 20px;
+    background-color: #000000;
+    border-radius: 10px;
+    position: relative;
+    transition: background-color 0.3s;
+  }
+  
+  .switch-toggle::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    transition: transform 0.3s;
+  }
+  
+  .custom-switch.active .switch-toggle {
+    background-color: red; /* Active color */
+  }
+  
+  .custom-switch.active .switch-toggle::before {
+    transform: translateX(20px);
+  }
+  
